@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="430" viewBox="0 0 980 430" role="img" aria-labelledby="title desc">
+  <title id="title">ContextScope terminal matrix demo</title>
+  <desc id="desc">A terminal-style matrix comparing instruction sources for Codex, Claude, Copilot, Cursor and Gemini.</desc>
+  <rect width="980" height="430" rx="20" fill="#0d1117"/>
+  <rect x="0" y="0" width="980" height="48" rx="20" fill="#161b22"/>
+  <circle cx="28" cy="24" r="7" fill="#ff5f56"/><circle cx="52" cy="24" r="7" fill="#ffbd2e"/><circle cx="76" cy="24" r="7" fill="#27c93f"/>
+  <text x="100" y="30" fill="#8b949e" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="15">contextscope matrix src/auth/login.ts</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="17" fill="#c9d1d9">
+    <text x="36" y="88" fill="#58a6ff">ContextScope matrix — src/auth/login.ts</text>
+    <text x="36" y="130" fill="#8b949e">Agent</text><text x="250" y="130" fill="#8b949e">Sources</text><text x="390" y="130" fill="#8b949e">Tokens</text><text x="520" y="130" fill="#8b949e">Certainty</text>
+    <line x1="36" y1="145" x2="830" y2="145" stroke="#30363d"/>
+    <text x="36" y="180">codex</text><text x="250" y="180">3</text><text x="390" y="180">814</text><text x="520" y="180" fill="#3fb950">exact</text>
+    <text x="36" y="218">claude</text><text x="250" y="218">2</text><text x="390" y="218">621</text><text x="520" y="218" fill="#d29922">partial</text>
+    <text x="36" y="256">copilot</text><text x="250" y="256">2</text><text x="390" y="256">492</text><text x="520" y="256" fill="#3fb950">exact</text>
+    <text x="36" y="294">cursor</text><text x="250" y="294">4</text><text x="390" y="294">1170</text><text x="520" y="294" fill="#d29922">conditional</text>
+    <text x="36" y="332">gemini</text><text x="250" y="332">2</text><text x="390" y="332">700</text><text x="520" y="332" fill="#d29922">partial</text>
+    <text x="36" y="382" fill="#f85149">Shared source-file parity: 14%</text>
+    <text x="36" y="410" fill="#8b949e">Same repository. Different agent reality.</text>
+  </g>
+</svg>
