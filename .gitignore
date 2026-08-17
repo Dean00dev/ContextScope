@@ -1,0 +1,4 @@
+node_modules/
+contextscope-report/
+*.log
+.DS_Store
