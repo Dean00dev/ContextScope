@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { scanRepository } from './analyze.js';
 import { scanToMarkdown, scanToSarif, scanToJunit } from './report.js';
-import { findRepoRoot } from './paths.js';
+import { findRepoRoot, isWithin } from './paths.js';
 
 async function append(file, text) {
   if (!file) return;
@@ -11,7 +11,8 @@ async function append(file, text) {
 
 async function main() {
   const root = await findRepoRoot(process.env.GITHUB_WORKSPACE || process.cwd());
-  const reportDir = path.join(root, process.env.INPUT_REPORT_DIR || 'contextscope-report');
+  const reportDir = path.resolve(root, process.env.INPUT_REPORT_DIR || 'contextscope-report');
+  if (!isWithin(path.resolve(root), reportDir)) throw new Error('report_dir must stay inside the repository');
   const failOnWarning = (process.env.INPUT_FAIL_ON_WARNING || 'false').toLowerCase() === 'true';
   const scan = await scanRepository(root);
   await fs.mkdir(reportDir, { recursive: true });
