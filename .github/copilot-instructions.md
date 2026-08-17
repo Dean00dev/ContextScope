@@ -1,0 +1,1 @@
+ContextScope is a zero-runtime-dependency Node.js CLI for reconstructing repository-provided coding-agent instruction surfaces. Preserve explicit `exact`, `partial`, and `conditional` certainty labels. Run `npm run verify` after changes. Do not introduce network/model calls into the default static analysis path.
