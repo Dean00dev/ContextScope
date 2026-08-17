@@ -1,0 +1,6 @@
+---
+globs: "src/auth/**"
+alwaysApply: false
+---
+Never log tokens.
+Use tabs in auth code.
