@@ -1,0 +1,40 @@
+{
+  "name": "contextscope",
+  "version": "0.1.0",
+  "description": "See the instructions your coding agents actually see.",
+  "type": "module",
+  "bin": {
+    "contextscope": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check src/*.js && node --check test/*.js",
+    "verify": "npm run check && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src/",
+    "docs/",
+    "action.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai",
+    "coding-agents",
+    "agents-md",
+    "claude-code",
+    "codex",
+    "copilot",
+    "cursor",
+    "gemini-cli",
+    "developer-tools"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dean00dev/ContextScope.git"
+  }
+}
