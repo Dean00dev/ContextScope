@@ -1,0 +1,31 @@
+name: ContextScope
+description: See and audit the repository instructions your coding agents receive.
+author: Dean Egan
+branding:
+  icon: crosshair
+  color: purple
+inputs:
+  fail_on_warning:
+    description: Fail the Action when ContextScope finds warning-level issues.
+    required: false
+    default: "false"
+  report_dir:
+    description: Directory for ContextScope evidence reports.
+    required: false
+    default: contextscope-report
+outputs:
+  warnings:
+    description: Number of warning-level findings.
+  files:
+    description: Number of detected instruction files.
+  json_report:
+    description: Path to the JSON report.
+  sarif_report:
+    description: Path to the SARIF report.
+  junit_report:
+    description: Path to the JUnit report.
+  markdown_report:
+    description: Path to the Markdown summary.
+runs:
+  using: node24
+  main: src/action.js
