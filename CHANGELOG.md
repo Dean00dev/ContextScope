@@ -2,6 +2,26 @@
 
 All notable changes to ContextScope are documented here.
 
+## [0.2.0] - 2026-08-18
+
+### Added
+
+- frictionless `npx --yes github:Dean00dev/ContextScope ...` usage for first-run evaluation;
+- a five-minute quickstart covering local inspection, cross-agent comparison, repository scanning and CI adoption;
+- release badge and clearer zero-account/zero-API-key onboarding.
+
+### Changed
+
+- GitHub Action examples now target `v0.2.0`;
+- README positioning and command discovery are optimized for first-time visitors;
+- roadmap numbering reflects the onboarding release before PR impact analysis.
+
+### Preserved
+
+- no runtime dependencies, telemetry, model calls or API keys;
+- explicit exact/partial/conditional certainty boundaries;
+- existing five-agent analysis semantics.
+
 ## [0.1.0] - 2026-08-17
 
 ### Added
