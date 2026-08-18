@@ -12,7 +12,15 @@ ContextScope is optimized for evidence value rather than feature count.
 - zero-runtime-dependency CLI and GitHub Action;
 - Linux/macOS/Windows CI.
 
-## v0.2 — pull-request blast radius
+## v0.2 — adoption and first-run experience
+
+- run directly with `npx --yes github:Dean00dev/ContextScope ...`;
+- five-minute quickstart;
+- clearer first-run command discovery;
+- release-ready GitHub Action examples;
+- synchronized release metadata and improved repository discoverability.
+
+## v0.3 — pull-request blast radius
 
 Given a before/after commit, identify which repository paths have a changed effective instruction set for each agent.
 
@@ -22,7 +30,7 @@ Target output:
 
 This requires deterministic changed-path enumeration, cached profile resolution and explicit handling of deleted/renamed instruction files.
 
-## v0.3 — parity policy
+## v0.4 — parity policy
 
 - baseline files;
 - allowlisted intentional divergence;
@@ -30,7 +38,7 @@ This requires deterministic changed-path enumeration, cached profile resolution 
 - “new agent surface introduced” policy;
 - CI regression comparison across commits.
 
-## v0.4 — provenance graph
+## v0.5 — provenance graph
 
 Export a machine-readable graph of instruction files, imports, scope edges and target applicability for visualization/editor integrations.
 

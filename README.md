@@ -7,6 +7,7 @@
 **Codex · Claude Code · GitHub Copilot · Cursor · Gemini CLI**
 
 [![CI](https://github.com/Dean00dev/ContextScope/actions/workflows/ci.yml/badge.svg)](https://github.com/Dean00dev/ContextScope/actions/workflows/ci.yml)
+[![Release](https://img.shields.io/github/v/release/Dean00dev/ContextScope)](https://github.com/Dean00dev/ContextScope/releases)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node 20+](https://img.shields.io/badge/node-%3E%3D20-brightgreen.svg)](package.json)
 
@@ -34,6 +35,20 @@ gemini       2        700      partial
 Shared source-file parity: 14%
 ```
 
+## Try it in 30 seconds
+
+From the root of any Git repository with Node.js 20+:
+
+```bash
+npx --yes github:Dean00dev/ContextScope doctor
+npx --yes github:Dean00dev/ContextScope scan
+npx --yes github:Dean00dev/ContextScope matrix src/auth/login.ts
+```
+
+Replace the example path with a real path in your repository. No API key, account, model call, telemetry service, or global install is required.
+
+**New here?** Follow the [five-minute quickstart](docs/QUICKSTART.md), then see [Semantics and limits](docs/SEMANTICS.md) for the exact boundaries of every claim.
+
 ## Why this exists
 
 Agent instructions are becoming repository infrastructure, but their discovery rules are fragmented across tools. A change in one instruction file can affect one agent, one directory, one file type, or an entire repository while leaving another agent untouched.
@@ -48,11 +63,19 @@ It is offline, model-agnostic, zero-runtime-dependency, and explicit about uncer
 
 Node.js 20+ and Git are required.
 
+Run without a global install:
+
+```bash
+npx --yes github:Dean00dev/ContextScope doctor
+```
+
+Or install globally from GitHub:
+
 ```bash
 npm install --global github:Dean00dev/ContextScope
 ```
 
-Or run directly from a clone:
+Or clone it:
 
 ```bash
 git clone https://github.com/Dean00dev/ContextScope.git
@@ -117,7 +140,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: Dean00dev/ContextScope@v0.1.0
+      - uses: Dean00dev/ContextScope@v0.2.0
         with:
           fail_on_warning: false
       - uses: actions/upload-artifact@v4
@@ -129,7 +152,7 @@ jobs:
 
 The Action writes Markdown, JSON, SARIF and JUnit evidence. Command/model output is not involved because ContextScope does not call a model.
 
-## Supported instruction surfaces in v0.1
+## Supported instruction surfaces in v0.2
 
 | Agent | Repository surfaces | Static certainty |
 | --- | --- | --- |
@@ -150,9 +173,10 @@ That boundary is a feature, not fine print.
 ## Roadmap
 
 - **v0.1** — path explain/matrix/diff, repository scan, five agent profiles, Action, JSON/SARIF/JUnit.
-- **v0.2** — PR impact analysis: “this instruction change alters effective context for N paths.”
-- **v0.3** — repository parity policies, baselines, allowlists and drift budgets.
-- **v0.4** — machine-readable provenance graph and editor integrations.
+- **v0.2** — frictionless `npx` onboarding, release-ready Action usage, quickstart and discoverability polish.
+- **v0.3** — PR impact analysis: “this instruction change alters effective context for N paths.”
+- **v0.4** — repository parity policies, baselines, allowlists and drift budgets.
+- **v0.5** — machine-readable provenance graph and editor integrations.
 
 See [ROADMAP.md](docs/ROADMAP.md).
 
